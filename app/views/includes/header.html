@@ -1,0 +1,19 @@
+{% macro AppHeader(params) %}
+    <header class="app-header">
+        <div class="govuk-width-container">
+            <div class="app-header-container">
+                <a href="/" class="govuk-link app-header-logo">
+                    <span class="app-header-icon">
+                        {{ params.logo | safe }}
+                    </span>
+                    <span class="app-header-title">
+                        {{ params.title }}
+                    </span>
+                </a>
+                <span class="app-header-servicename">
+                    {{ params.serviceName }}
+                </span>
+            </div>
+        </div>
+    </header>
+{% endmacro %}

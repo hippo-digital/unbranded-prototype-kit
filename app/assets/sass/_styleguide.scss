@@ -1,0 +1,106 @@
+@import "settings.scss";
+@import "node_modules/govuk-frontend/govuk/base";
+
+// Documentation styling
+
+* {
+    scroll-padding: govuk-spacing(6);
+}
+
+.docs-swatch {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.2rem;
+    margin-bottom: govuk-spacing(3);
+}
+.docs-swatch-color {
+    height: 2em;
+    width: 2em;
+    border: 1px solid $govuk-text-colour;
+    border-radius: $app-border-radius;
+}
+.docs-swatch .govuk-body {
+    font-size: inherit;
+    margin: 0;
+}
+
+.docs-swatch-color--primary-color { background-color: $app-primary-colour; }
+.docs-swatch-color--secondary-color { background-color: $app-secondary-colour; }
+
+.docs-swatch-color--red { background-color: govuk-colour("red"); }
+.docs-swatch-color--yellow { background-color: govuk-colour("yellow"); }
+.docs-swatch-color--green { background-color: govuk-colour("green"); }
+.docs-swatch-color--blue { background-color: govuk-colour("blue"); }
+.docs-swatch-color--dark-blue { background-color: govuk-colour("dark-blue"); }
+.docs-swatch-color--light-blue { background-color: govuk-colour("light-blue"); }
+.docs-swatch-color--purple { background-color: govuk-colour("purple"); }
+
+.docs-swatch-color--black { background-color: govuk-colour("black"); }
+.docs-swatch-color--dark-grey { background-color: govuk-colour("dark-grey"); }
+.docs-swatch-color--mid-grey { background-color: govuk-colour("mid-grey"); }
+.docs-swatch-color--light-grey { background-color: govuk-colour("light-grey"); }
+.docs-swatch-color--white { background-color: govuk-colour("white"); }
+
+.docs-swatch-color--light-purple { background-color: govuk-colour("light-purple"); }
+.docs-swatch-color--bright-purple { background-color: govuk-colour("bright-purple"); }
+.docs-swatch-color--pink { background-color: govuk-colour("pink"); }
+.docs-swatch-color--light-pink { background-color: govuk-colour("light-pink"); }
+.docs-swatch-color--orange { background-color: govuk-colour("orange"); }
+.docs-swatch-color--brown { background-color: govuk-colour("brown"); }
+.docs-swatch-color--light-green { background-color: govuk-colour("light-green"); }
+.docs-swatch-color--turquoise { background-color: govuk-colour("turquoise"); }
+
+.docs-back-to-top {
+    display: flex;
+    align-items: center;
+    gap: govuk-spacing(2);
+    @include govuk-font($size: 19);
+    padding: govuk-spacing(3) govuk-spacing(4);
+    margin-top: govuk-spacing(4);
+    background-color: govuk-colour("light-grey");
+    border-radius: $app-border-radius;
+}
+
+.docs-back-to-top.is-floating {
+    position: fixed;
+    bottom: govuk-spacing(4);
+    right: govuk-spacing(4);
+    box-shadow: 0 2px 10px -3px rgba(0, 0, 0, 0.4);
+}
+@include govuk-media-query($from: tablet) {
+    .docs-back-to-top.is-floating {
+        bottom: govuk-spacing(8);
+        right: govuk-spacing(8);
+    }
+}
+
+.docs-contents {
+    column-count: 2;
+    gap: govuk-spacing(4);
+}
+@include govuk-media-query($from: tablet) {
+    .docs-contents {
+        width: 150%;
+        column-count: 3;
+    }
+}
+@include govuk-media-query($from: desktop) {
+    .docs-contents {
+        column-count: 4;
+    }
+}
+
+.docs-note {
+    background: govuk-colour("yellow");
+    padding: 1.5rem;
+    transform: rotate(-1deg);
+    box-shadow: 0 2px 10px -3px rgba(0, 0, 0, 0.4);
+    font-family: "Comic Sans MS", sans-serif;
+}
+.docs-note * {
+    font-family: inherit !important;
+}
+.docs-note :last-child {
+    margin-bottom: 0 !important;
+}

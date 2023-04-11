@@ -1,0 +1,977 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Styleguide | {{ super() }}
+{% endblock %}
+
+
+{% block beforeContent %}
+    {{ govukBackLink({
+        text: "Back",
+        href: "/"
+    }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Styleguide
+        </h1>
+        <h2 class="govuk-heading-l" id="contents">Contents</h2>
+        <ul class="govuk-list govuk-list--spaced">
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#colours">Colours</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#components">Components</a></li>
+        </ul>
+        <h2 class="govuk-heading-l" id="colours">Colours</h2>
+        <h3 class="govuk-heading-m">Brand</h3>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--primary-color"></div>
+            <p class="govuk-body">Brand Primary Colour</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--secondary-color"></div>
+            <p class="govuk-body">Brand Secondary Colour</p>
+        </div>
+        <h3 class="govuk-heading-m govuk-!-margin-top-7">Applied colour palette</h3>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--red"></div>
+            <p class="govuk-body">Red</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--yellow"></div>
+            <p class="govuk-body">Yellow</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--green"></div>
+            <p class="govuk-body">Green</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--blue"></div>
+            <p class="govuk-body">Blue</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--dark-blue"></div>
+            <p class="govuk-body">Dark Blue</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--light-blue"></div>
+            <p class="govuk-body">Light Blue</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--purple"></div>
+            <p class="govuk-body">Purple</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--black"></div>
+            <p class="govuk-body">Black</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--dark-grey"></div>
+            <p class="govuk-body">Dark Grey</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--mid-grey"></div>
+            <p class="govuk-body">Mid Grey</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--light-grey"></div>
+            <p class="govuk-body">Light Grey</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--white"></div>
+            <p class="govuk-body">White</p>
+        </div>
+        {% set extendedColoursHtml %}
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--light-purple"></div>
+            <p class="govuk-body">Light Purple</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--bright-purple"></div>
+            <p class="govuk-body">Bright Purple</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--pink"></div>
+            <p class="govuk-body">Pink</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--light-pink"></div>
+            <p class="govuk-body">Light pink</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--orange"></div>
+            <p class="govuk-body">Orange</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--brown"></div>
+            <p class="govuk-body">Brown</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--light-green"></div>
+            <p class="govuk-body">Light green</p>
+        </div>
+        <div class="docs-swatch">
+            <div class="docs-swatch-color docs-swatch-color--turquoise"></div>
+            <p class="govuk-body">Turquoise</p>
+        </div>
+        {% endset %}
+        {{ govukDetails({
+            summaryText: "Extended colour palette",
+            html: extendedColoursHtml,
+            classes: "govuk-!-margin-top-6"
+        }) }}
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-xl" id="components">Components</h2>
+        <ul class="docs-contents govuk-list govuk-list--spaced">
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#accordion">Accordion</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#back-link">Back link</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#breadcrumbs">Breadcrumbs</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#button">Button</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#cookie-banner">Cookie banner</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#date-input">Date input</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#details">Details</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#checkboxes">Checkboxes</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#error-message">Error message</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#error-summary">Error summary</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#fieldset">Fieldset</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#file-upload">File upload</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#footer">Footer</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#header">Header</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#inset-text">Inset text</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#notification-banner">Notification banner</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#pagination">Pagination</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#panel">Panel</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#radios">Radios</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#select">Select</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#summary-list">Summary list</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#tag">Tag</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#table">Table</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#tabs">Tabs</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#text-input">Text input</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#textarea">Textarea</a></li>
+            <li><a class="govuk-link govuk-link--no-visited-state" href="#warning-text">Warning text</a></li>
+        </ul>
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="accordion">Accordion</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#accordion">Accordion</a> component.</p>
+        {{ govukAccordion({
+            id: "accordion-default",
+            items: [
+                {
+                heading: {
+                    text: "Writing well for the web"
+                },
+                content: {
+                    html: "<p class='govuk-body'>This is the content for Writing well for the web.</p>"
+                }
+                },
+                {expanded: false,
+                heading: {
+                    text: "Writing well for specialists"
+                },
+                content: {
+                    html: "<p class='govuk-body'>This is the content for Writing well for specialists.</p>"
+                }
+                },
+                {
+                heading: {
+                    text: "Know your audience"
+                },
+                content: {
+                    html: "<p class='govuk-body'>This is the content for Know your audience.</p>"
+                }
+                },
+                {
+                heading: {
+                    text: "How people read"
+                },
+                content: {
+                    html: "<p class='govuk-body'>This is the content for How people read.</p>"
+                }
+                }
+            ]
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="back-link">Back Link</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#back-link">Back Link</a> component.</p>
+        {{ govukBackLink({
+            text: "Back",
+            href: "#"
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="breadcrumbs">Breadcrumbs</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#breadcrumbs">Breadcrumbs</a> component.</p>
+
+        {{ govukBreadcrumbs({
+        items: [
+            {
+            text: "Home",
+            href: "#"
+            },
+            {
+            text: "Patient appointments",
+            href: "#"
+            },
+            {
+            text: "Today",
+            href: "#"
+            }
+        ]
+        }) }}
+
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="button">Buttons</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#buttons">Buttons</a> component.</p>
+        {{ govukButton({
+            text: "Save and continue"
+        }) }}
+
+        <h3 class="govuk-heading-m">Secondary button</h3>
+
+        {{ govukButton({
+            text: "Find address",
+            classes: "govuk-button--secondary"
+        }) }}
+
+        <h3 class="govuk-heading-m">Warning button</h3>
+
+        {{ govukButton({
+            text: "Delete account",
+            classes: "govuk-button--warning"
+        }) }}
+       
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="character-count">Character count</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#character-count">Character count</a> component.</p>
+        {{ govukCharacterCount({
+            name: "with-hint",
+            id: "with-hint",
+            maxlength: 200,
+            label: {
+                text: "Can you provide more detail?",
+                classes: "govuk-label--m",
+                isPageHeading: true
+            },
+            hint: {
+                text: "Do not include personal or financial information like your National Insurance number or credit card details."
+            }
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="checkboxes">Checkboxes</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#checkboxes">Checkboxes</a> component.</p>
+        {{ govukCheckboxes({
+            idPrefix: "waste",
+            name: "waste",
+            fieldset: {
+                legend: {
+                text: "Which types of waste do you transport?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+                }
+            },
+            hint: {
+                text: "Select all that apply."
+            },
+            items: [
+                {
+                value: "electronics",
+                text: "Waste from electronics"
+                },
+                {
+                value: "mines",
+                text: "Waste from mines or quarries"
+                },
+                {
+                value: "farm",
+                text: "Farm or agricultural waste"
+                }
+            ]
+            }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="cookie-banner">Cookie banner</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#cookie-banner">Cookie banner</a> component.</p>
+        {% set html %}
+            <p class="govuk-body">We use some essential cookies to make this service work.</p>
+            <p class="govuk-body">We’d also like to use analytics cookies so we can understand how you use the service and make improvements.</p>
+        {% endset %}
+
+        {{ govukCookieBanner({
+        ariaLabel: "Cookies on Eventum",
+        messages: [
+            {
+            headingText: "Cookies on Eventum",
+            html: html,
+            actions: [
+                {
+                text: "Accept analytics cookies",
+                type: "button",
+                name: "cookies",
+                value: "accept"
+                },
+                {
+                text: "Reject analytics cookies",
+                type: "button",
+                name: "cookies",
+                value: "reject"
+                },
+                {
+                text: "View cookies",
+                href: "#"
+                }
+            ]
+            }
+        ]
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="date-input">Date input</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#date-input">Date input</a> component.</p>
+        {{ govukDateInput({
+            id: "passport-issued",
+            namePrefix: "passport-issued",
+            fieldset: {
+                legend: {
+                text: "What is your date of birth?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+                }
+            },
+            hint: {
+                text: "For example, 27 3 1987"
+            }
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="details">Details</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#details">Details</a> component.</p>
+        {{ govukDetails({
+            summaryText: "Help with nationality",
+            text: "We need to know your nationality so we can work out which elections you’re entitled to vote in. If you cannot provide your nationality, you’ll have to send copies of identity documents through the post."
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="error-message">Error message</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#error-message">Error message</a> component.</p>
+        {{ govukErrorMessage({
+            text: "Rhowch eich enw llawn",
+            visuallyHiddenText: "Gwall"
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="error-summary">Error summary</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#error-summary">Error summary</a> component.</p>
+        {{ govukErrorSummary({
+            disableAutoFocus: true,
+            titleText: "There is a problem",
+            errorList: [
+                {
+                text: "Your birth date must be in the past",
+                href: "#passport-issued-day"
+                },
+                {
+                text: "Enter a postcode, like AA1 1AA",
+                href: "#postcode-input"
+                }
+            ]
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="fieldset">Fieldset</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#fieldset">Fieldset</a> component.</p>
+        {{ govukFieldset({
+            legend: {
+                text: "Legend as page heading",
+                classes: "govuk-fieldset__legend--m",
+                isPageHeading: true
+            }
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="file-upload">File upload</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#file-upload">File upload</a> component.</p>
+        {{ govukFileUpload({
+            id: "file-upload-1",
+            name: "file-upload-1",
+            label: {
+                text: "Upload a file"
+            }
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="footer">Footer</h2>
+        {% from "includes/footer.html" import AppFooter %}
+
+        {{ AppFooter() }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l" id="header">Header</h2>
+        {% from "includes/header.html" import AppHeader %}
+
+        {{ AppHeader() }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l" id="inset-text">Inset text</h2>
+        {{ govukInsetText({
+        text: "It can take up to 8 weeks to register a lasting power of attorney if there are no mistakes in the application."
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="notification-banner">Notification banner</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#notification-banner">Notification banner</a> component.</p>
+        {% set html %}
+            <p class="govuk-notification-banner__heading">
+                You have 7 days left to send your application.
+                <a class="govuk-notification-banner__link" href="#">View application</a>.
+            </p>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+            html: html
+        }) }}
+
+        <h2 class="govuk-heading-m">Success notification banner</h2>
+        {% set html %}
+            <h3 class="govuk-notification-banner__heading">
+                Training outcome recorded and trainee withdrawn
+            </h3>
+            <p class="govuk-body">Contact <a class="govuk-notification-banner__link" href="#">example@eventumortho.io</a> if you think there's a problem.</p>
+        {% endset %}
+
+        {{ govukNotificationBanner({
+            html: html,
+            type: 'success',
+            disableAutoFocus: true
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="pagination">Pagination</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#pagination">Pagination</a> component.</p>
+        {{ govukPagination({
+            previous: {
+                href: "#"
+            },
+            next: {
+                href: "#"
+            },
+            items: [
+                {
+                number: 1,
+                href: "#"
+                },
+                {
+                number: 2,
+                current: true,
+                href: "#"
+                },
+                {
+                number: 3,
+                href: "#"
+                }
+            ]
+            }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="panel">Panel</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#panel">Panel</a> component.</p>
+        {{ govukPanel({
+            titleText: "Application complete",
+            html: "Your reference number<br><strong>HDJ2123F</strong>"
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="radios">Radios</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#radios">Radios</a> component.</p>
+        {{ govukRadios({
+            idPrefix: "where-do-you-live",
+            name: "where-do-you-live",
+            fieldset: {
+                legend: {
+                text: "Where do you live?",
+                isPageHeading: true,
+                classes: "govuk-fieldset__legend--m"
+                }
+            },
+            items: [
+                {
+                value: "england",
+                text: "England"
+                },
+                {
+                value: "scotland",
+                text: "Scotland"
+                },
+                {
+                value: "wales",
+                text: "Wales"
+                },
+                {
+                value: "northern-ireland",
+                text: "Northern Ireland"
+                }
+            ]
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l">Select</h2>
+        {{ govukSelect({
+            id: "sort",
+            name: "sort",
+            label: {
+                text: "Sort by"
+            },
+            items: [
+                {
+                    value: "published",
+                    text: "Recently published"
+                },
+                {
+                    value: "updated",
+                    text: "Recently updated",
+                    selected: true
+                },
+                {
+                    value: "views",
+                    text: "Most views"
+                },
+                {
+                    value: "comments",
+                    text: "Most comments"
+                }
+            ]
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="summary-list">Summary list</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#summary-list">Summary list</a> component.</p>
+        {{ govukSummaryList({
+            rows: [
+                {
+                key: {
+                    text: "Name"
+                },
+                value: {
+                    text: "Sarah Philips"
+                },
+                actions: {
+                    items: [
+                    {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "name"
+                    }
+                    ]
+                }
+                },
+                {
+                key: {
+                    text: "Date of birth"
+                },
+                value: {
+                    text: "5 January 1978"
+                },
+                actions: {
+                    items: [
+                    {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "date of birth"
+                    }
+                    ]
+                }
+                },
+                {
+                key: {
+                    text: "Address"
+                },
+                value: {
+                    html: "72 Guild Street<br>London<br>SE23 6FH"
+                },
+                actions: {
+                    items: [
+                    {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "address"
+                    }
+                    ]
+                }
+                },
+                {
+                key: {
+                    text: "Contact details"
+                },
+                value: {
+                    html: '<p class="govuk-body">07700 900457</p><p class="govuk-body">sarah.phillips@example.com</p>'
+                },
+                actions: {
+                    items: [
+                    {
+                        href: "#",
+                        text: "Change",
+                        visuallyHiddenText: "contact details"
+                    }
+                    ]
+                }
+                }
+            ]
+            }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="table">Table</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#table">Table</a> component.</p>
+        {{ govukTable({
+            head: [
+                {
+                text: "Case manager"
+                },
+                {
+                text: "Cases opened"
+                },
+                {
+                text: "Cases closed"
+                }
+            ],
+            rows: [
+                [
+                {
+                    text: "David Francis"
+                },
+                {
+                    text: "3"
+                },
+                {
+                    text: "0"
+                }
+                ],
+                [
+                {
+                    text: "Paul Farmer"
+                },
+                {
+                    text: "1"
+                },
+                {
+                    text: "0"
+                }
+                ],
+                [
+                {
+                    text: "Rita Patel"
+                },
+                {
+                    text: "2"
+                },
+                {
+                    text: "0"
+                }
+                ]
+            ]
+            }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="tabs">Tabs</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#tabs">Tabs</a> component.</p>
+        {% set pastDayHtml %}
+            <h2 class="govuk-heading-l">Past day</h2>
+            {{ govukTable({
+            head: [
+                {
+                text: "Case manager"
+                },
+                {
+                text: "Cases opened"
+                },
+                {
+                text: "Cases closed"
+                }
+            ],
+            rows: [
+                [
+                {
+                    text: "David Francis"
+                },
+                {
+                    text: "3"
+                },
+                {
+                    text: "0"
+                }
+                ],
+                [
+                {
+                    text: "Paul Farmer"
+                },
+                {
+                    text: "1"
+                },
+                {
+                    text: "0"
+                }
+                ],
+                [
+                {
+                    text: "Rita Patel"
+                },
+                {
+                    text: "2"
+                },
+                {
+                    text: "0"
+                }
+                ]
+            ]
+            }) }}
+            {% endset -%}
+
+            {% set pastWeekHtml %}
+            <h2 class="govuk-heading-l">Past week</h2>
+            {{ govukTable({
+            head: [
+                {
+                text: "Case manager"
+                },
+                {
+                text: "Cases opened"
+                },
+                {
+                text: "Cases closed"
+                }
+            ],
+            rows: [
+                [
+                {
+                    text: "David Francis"
+                },
+                {
+                    text: "24"
+                },
+                {
+                    text: "18"
+                }
+                ],
+                [
+                {
+                    text: "Paul Farmer"
+                },
+                {
+                    text: "16"
+                },
+                {
+                    text: "20"
+                }
+                ],
+                [
+                {
+                    text: "Rita Patel"
+                },
+                {
+                    text: "24"
+                },
+                {
+                    text: "27"
+                }
+                ]
+            ]
+            }) }}
+            {% endset -%}
+
+            {% set pastMonthHtml %}
+            <h2 class="govuk-heading-l">Past month</h2>
+            {{ govukTable({
+            head: [
+                {
+                text: "Case manager"
+                },
+                {
+                text: "Cases opened"
+                },
+                {
+                text: "Cases closed"
+                }
+            ],
+            rows: [
+                [
+                {
+                    text: "David Francis"
+                },
+                {
+                    text: "98"
+                },
+                {
+                    text: "95"
+                }
+                ],
+                [
+                {
+                    text: "Paul Farmer"
+                },
+                {
+                    text: "122"
+                },
+                {
+                    text: "131"
+                }
+                ],
+                [
+                {
+                    text: "Rita Patel"
+                },
+                {
+                    text: "126"
+                },
+                {
+                    text: "142"
+                }
+                ]
+            ]
+            }) }}
+            {% endset -%}
+
+            {% set pastYearHtml %}
+            <h2 class="govuk-heading-l">Past year</h2>
+            {{ govukTable({
+            head: [
+                {
+                text: "Case manager"
+                },
+                {
+                text: "Cases opened"
+                },
+                {
+                text: "Cases closed"
+                }
+            ],
+            rows: [
+                [
+                {
+                    text: "David Francis"
+                },
+                {
+                    text: "1380"
+                },
+                {
+                    text: "1472"
+                }
+                ],
+                [
+                {
+                    text: "Paul Farmer"
+                },
+                {
+                    text: "1129"
+                },
+                {
+                    text: "1083"
+                }
+                ],
+                [
+                {
+                    text: "Rita Patel"
+                },
+                {
+                    text: "1539"
+                },
+                {
+                    text: "1265"
+                }
+                ]
+            ]
+            }) }}
+            {% endset -%}
+
+            {{ govukTabs({
+            items: [
+                {
+                label: "Past day",
+                id: "past-day",
+                panel: {
+                    html: pastDayHtml
+                }
+                },
+                {
+                label: "Past week",
+                id: "past-week",
+                panel: {
+                    html: pastWeekHtml
+                }
+                },
+                {
+                label: "Past month",
+                id: "past-month",
+                panel: {
+                    html: pastMonthHtml
+                }
+                },
+                {
+                label: "Past year",
+                id: "past-year",
+                panel: {
+                    html: pastYearHtml
+                }
+                }
+            ]
+            }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="tag">Tag</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#tag">Tag</a> component.</p>
+        {{ govukTag({
+            text: "completed"
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="text-input">Text input</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#text-input">Text input</a> component.</p>
+        {{ govukInput({
+            label: {
+                text: "What is the name of the event?",
+                classes: "govuk-label--m",
+                isPageHeading: true
+            },
+            id: "event-name",
+            name: "event-name"
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="textarea">Textarea</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#textarea">Textarea</a> component.</p>
+        {{ govukTextarea({
+            name: "more-detail",
+            id: "more-detail",
+            label: {
+                text: "Can you provide more detail?",
+                classes: "govuk-label--m",
+                isPageHeading: true
+            },
+            hint: {
+                text: "Do not include personal or financial information, like your National Insurance number or credit card details."
+            }
+        }) }}
+
+        <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+        <h2 class="govuk-heading-l govuk-!-margin-bottom-2" id="warning-text">Warning text</h2>
+        <p class="govuk-body govuk-!-margin-bottom-8">Based on the GOV.UK Design System <a class="govuk-link" href="#warning-text">Warning text</a> component.</p>
+        {{ govukWarningText({
+            text: "You can be fined up to £5,000 if you do not register.",
+            iconFallbackText: "Warning"
+        }) }}
+
+        <a class="govuk-link govuk-link--no-visited-state docs-back-to-top" href="#contents">
+            <svg role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" width="13" height="17" viewBox="0 0 13 17">
+                <path fill="currentColor" d="M6.5 0L0 6.5 1.4 8l4-4v12.7h2V4l4.3 4L13 6.4z"></path>
+            </svg>
+            Back to contents
+        </a>
+    </div>
+</div>
+
+{% endblock %}

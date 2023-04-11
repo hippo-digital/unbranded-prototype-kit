@@ -1,0 +1,33 @@
+@import "node_modules/govuk-frontend/govuk/base";
+
+// Make sure we avoid the page looking like GOV.UK
+// https://www.gov.uk/service-manual/design/making-your-service-look-like-govuk#if-your-service-isnt-on-govuk
+
+$app-border-radius: 8px;
+$app-primary-colour: #3f51b5;
+$app-secondary-colour: #EF6191;
+
+$app-header-background-colour: $app-primary-colour;
+$app-header-text-colour: govuk-colour("white");
+$app-footer-background-colour: $app-primary-colour;
+$app-footer-text-colour: govuk-colour("white");
+
+// Change the default font to use the system font - with side benefit of increasing performance by avoiding loading custom fonts.
+$govuk-font-family: system-ui, sans-serif;
+
+// Override the canvas background colour, which is normally grey to blend with the GOV.UK footer.
+$govuk-canvas-background-colour: $app-footer-background-colour;
+
+// Override the focus colour
+$govuk-focus-colour: govuk-colour("light-pink");
+
+// https://frontend.design-system.service.gov.uk/sass-api-reference/#govuk-new-link-styles
+$govuk-new-link-styles: true;
+
+// For prototyping allow some global styles, dont use in production.
+$govuk-global-styles: true;
+
+// Find more variables to set in the GOV.UK Frontend Sass API reference: https://frontend.design-system.service.gov.uk/sass-api-reference/
+
+$govuk-frontend-rounded: $app-border-radius;
+@import "node_modules/govuk-frontend-rounded/all.scss";

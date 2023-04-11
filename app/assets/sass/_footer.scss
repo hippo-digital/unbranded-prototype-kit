@@ -1,0 +1,12 @@
+@import "settings.scss";
+
+.app-footer {
+    background: $app-footer-background-colour;
+    color: $app-footer-text-colour;
+    padding-top: govuk-spacing(4);
+    padding-bottom: govuk-spacing(4);
+}
+
+.app-footer [class^=govuk-]:not(:focus) {
+    color: inherit;
+}
